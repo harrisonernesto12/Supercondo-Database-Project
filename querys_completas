@@ -1,0 +1,65 @@
+/*SELECT
+    m.nome_morador,
+    m.cpf_morador,
+    c.nome_condominio,
+    u.unidade_bloco,
+    u.unidade_numero
+    
+FROM morador m
+JOIN unidades u ON m.cpf_morador = u.cpf_morador
+JOIN condominio c ON u.id_condominio = c.id_condominio;
+/
+SELECT 
+    m.nome_morador AS nome,
+    r.data,
+    r.descricao,
+    r.valor,
+    CASE 
+        WHEN r.historico = 1 THEN 'pendente'
+        WHEN r.historico = 2 THEN 'pago'
+    END AS situacao
+FROM receitas r 
+JOIN unidades u ON r.unidade_id = u.unidade_id
+JOIN morador m ON u.cpf_morador = m.cpf_morador;
+
+SELECT 
+    m.nome_morador,
+    r.data,
+    r.valor,
+    CASE 
+        WHEN r.historico = 1 THEN 'pendente'
+        WHEN r.historico = 2 THEN 'pago'
+    END AS situacao
+FROM receitas r
+JOIN unidades u ON r.unidade_id = u.unidade_id
+JOIN morador m ON u.cpf_morador = m.cpf_morador;
+*/
+
+
+/*DELETE FROM despesas
+WHERE id_condominio IS NULL
+  AND data IS NULL;
+  
+DELETE FROM despesas
+WHERE data IS NULL
+  AND valor > 1000;
+/
+DELETE FROM receitas
+WHERE id_receita = '12'
+and historico = '1';*/
+/*
+update despesas
+set data = '2025-11-17'
+where id_despesas = '6'
+
+update despesas
+set historico  = '2'
+where id_despesas = '6'
+*/
+/*
+update morador
+set email_morador = 'chiquinha@gmail.com'
+where cpf_morador = '123.456.789-04'
+*/
+
+
