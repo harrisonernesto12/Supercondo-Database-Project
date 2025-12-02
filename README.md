@@ -37,7 +37,7 @@ Você pode usar qualquer ferramenta, como:
 * **DBeaver**
 * **SQLiteStudio**
 
-Basta abrir o arquivo `supercondo.sql` e executar em ordem 1_create_tables.slq e 2_data.sql
+Basta abrir e executar os arquivos em ordem '1_create_tables.slq' e '2_data.sql'
 
 ### 2. Explorar os dados
 
